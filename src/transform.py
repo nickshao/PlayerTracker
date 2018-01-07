@@ -27,7 +27,7 @@ def intersection(o1, p1, o2, p2, img_size):
         tf = True
     return [tf, (rx, ry)]
 
-def getMatrix(img_path):
+def getMatrix(img_path, id, baseline, ftline):
     img = cv2.imread(img_path)
 
     # mask floor color
@@ -40,24 +40,32 @@ def getMatrix(img_path):
     kernel = np.ones((9, 9), np.uint8)
     mask = cv2.erode(mask, kernel, iterations=3)
     mask = cv2.dilate(mask, kernel, iterations=3)
-    #cv2.imwrite('test.jpg', mask)
+    cv2.imwrite('test.jpg', mask)
 
     # get edge
     edges = cv2.Canny(mask,50,150,apertureSize = 3)
 
     #filter range
     fil = np.zeros(img.shape[:2], np.uint8)
-    for i in range(int(img.shape[0] / 3), int(img.shape[0] * 2 / 3)):
+    for i in range(int(img.shape[0] / 4), int(img.shape[0] * 3 / 4)):
         for j in range(int(img.shape[1] * 2 / 3)):
             fil[i, j] = 255
     edges = cv2.bitwise_and(edges, edges, mask=fil)
-    #cv2.imwrite('edge.jpg', edges)
+    cv2.imwrite('edge.jpg', edges)
 
     # calculate Hough lines
-    lines = cv2.HoughLines(edges,1,np.pi/180, 50)
+    lines = cv2.HoughLines(edges,1,np.pi/180, 100)
     lines_points = []
+    for i in range(20):
+        lines_points.append(baseline)
+        lines_points.append(ftline)
+    cv2.line(img, baseline[0], baseline[1], (0, 0, 255), 2)
+    cv2.line(img, ftline[0], ftline[1], (0, 0, 255), 2)
     for i in range(len(lines)):
         for rho,theta in lines[i]:
+           # remove vertical noise 
+            if theta < 0.2 or theta > 2.94:
+                continue
             a = np.cos(theta)
             b = np.sin(theta)
             x0 = a*rho
@@ -67,8 +75,8 @@ def getMatrix(img_path):
             x2 = int(x0 - 1000*(-b))
             y2 = int(y0 - 1000*(a))
             lines_points.append([(x1, y1), (x2, y2)])
-            cv2.line(img,(x1,y1),(x2,y2),(0,0,255),2)
-
+            cv2.line(img,(x1, y1),(x2, y2),(0, 0, 255), 2)
+    
     # find intersection points
     points = []
     for i in range(len(lines_points)):
@@ -83,7 +91,7 @@ def getMatrix(img_path):
     points = np.array(points)
 
     # cluster points and find centers
-    core, lab = dbscan(points, eps=30, min_samples=10)
+    core, lab = dbscan(points, eps=30, min_samples=20)
     centers = []
     for i in range(np.amax(lab) + 1):
         count = 0
@@ -97,7 +105,7 @@ def getMatrix(img_path):
         total[1] = int(total[1] / count)
         centers.append(total)
         cv2.circle(img, (total[0], total[1]), 10, (255, 0, 0), -1)
-    #cv2.imwrite('houghlines.jpg',img)
+    cv2.imwrite('out/' + str(id) + 'houghlines.jpg',img)
 
     # order centers
     max_x = 0
@@ -132,7 +140,79 @@ def getMatrix(img_path):
     cv2.imwrite('warped.jpg', warped)
     return M
 
+def getfb(img_path, baseline=False):
+    if baseline == True:
+        _range = (0.75, 0.85)
+    else:
+        _range = (1.05, 1.15)
+
+    img = cv2.imread(img_path)
+
+    # mask floor color
+    img_hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    lower = np.array([95, 50, 50], dtype ="uint8")
+    upper = np.array([115, 255, 255], dtype="uint8")
+    mask = cv2.inRange(img_hsv, lower, upper)
+
+    # erosion and dilation
+    kernel = np.ones((9, 9), np.uint8)
+    mask = cv2.erode(mask, kernel, iterations=3)
+    mask = cv2.dilate(mask, kernel, iterations=3)
+
+    # get edge
+    edges = cv2.Canny(mask,50,150,apertureSize = 3)
+
+    #filter range
+    fil = np.zeros(img.shape[:2], np.uint8)
+    for i in range(int(img.shape[0] / 4), int(img.shape[0] * 3 / 4)):
+        for j in range(int(img.shape[1] * 2 / 3)):
+            fil[i, j] = 255
+    edges = cv2.bitwise_and(edges, edges, mask=fil)
+
+    # calculate Hough lines
+    lines = cv2.HoughLines(edges,1,np.pi/180, 50)
+    lines_points = []
+    for i in range(len(lines)):
+        for rho,theta in lines[i]:
+            if theta < _range[0] or theta > _range[1]:
+                continue
+            a = np.cos(theta)
+            b = np.sin(theta)
+            x0 = a*rho
+            y0 = b*rho
+            x1 = int(x0 + 1000*(-b))
+            y1 = int(y0 + 1000*(a))
+            x2 = int(x0 - 1000*(-b))
+            y2 = int(y0 - 1000*(a))
+            
+            return True, [(x1, y1), (x2, y2)]
+    return False, [(-1, -1), (-1, -1)]
+ 
 if __name__ == '__main__':
-    # test
-    M = getMatrix('assets/a.jpg')
-    print(M)
+
+    # get baseline and sideline
+    for i in range(4, 100):
+        tf, baseline = getfb('jt/output{0:03d}.jpg'.format(i), baseline=True)
+        if tf == True:
+            break
+        else:
+            baseline = -1
+    for i in range(4, 100):
+        tf, ftline = getfb('jt/output{0:03d}.jpg'.format(i), baseline=False)
+        if tf == True:
+            break
+        else:
+            ftline = -1
+    if baseline == -1 or ftline == -1:
+        print('I give up!')
+        exit()
+
+    for i in range(4, 100):
+        if getfb('jt/output{0:03d}.jpg'.format(i), baseline=True) == True:
+            _, baseline = getfb('jt/output{0:03d}.jpg'.format(i), baseline=True) 
+        if getfb('jt/output{0:03d}.jpg'.format(i), baseline=False) == True:
+            _, ftline = getfb('jt/output{0:03d}.jpg'.format(i), baseline=False)  
+        M = getMatrix('jt/output{0:03d}.jpg'.format(i), i, baseline, ftline)
+
+
+

@@ -10,7 +10,7 @@ Track the movements of NBA players and map them onto a tactic board.
 
 ## Location Transformation
 
-Takes a frame and returns the transformation matrix for mapping between video and tactic board.
+Takes a sequence of frames and returns the transformation matrix for mappings between video and tactic board.
 
 ### To Test
 
