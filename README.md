@@ -21,16 +21,16 @@ python3 src/tranform.py
 ### Demo
 
 Original image:  
-![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_original.jpg)<!-- .element height="50%" width="50%" -->  
+![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_original.jpg){:height="50%" width="50%"}  
 
 Target tactic board:  
-![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/court.jpg)<!-- .element height="50%" width="50%" -->  
+![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/court.jpg){:height="50%" width="50%"}  
 
 After Line detection and DBSCAN:  
-![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_houghlines.jpg)<!-- .element height="50%" width="50%" -->  
+![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_houghlines.jpg){:height="50%" width="50%"}  
 
 Warped Frame:  
-![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_warped.jpg)<!-- .element height="50%" width="50%" -->  
+![alt text](https://github.com/nickshao/PlayerTracker/blob/master/assets/t_warped.jpg){:height="50%" width="50%"}  
 
 ### Defects/Improvements
 
