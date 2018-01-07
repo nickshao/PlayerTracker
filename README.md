@@ -34,7 +34,7 @@ Warped Frame:
 
 ### Defects/Improvements
 
-Several parameters need to be tuned to for each video.
+Several parameters need to be tuned to suit each video.
 
 
 
