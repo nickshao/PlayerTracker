@@ -22,6 +22,7 @@ python3 src/tranform.py
 
 Original image:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_original.jpg" width="50%" height="50%"/>  
+
 Target tactic board:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/court.jpg" width="50%" height="50%"/>  
 
