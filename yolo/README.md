@@ -20,10 +20,10 @@ ffmpeg -i video.mpg -r 10 -qscale:v 2 output_%04d.jpg
 ### Dependencies
 ```
 pip3 install --user cython
-pip3 uninstall protobuf
-pip3 uninstall google
-pip3 install google
-pip3 install protobuf
+pip3 uninstall --user protobuf
+pip3 uninstall --user google
+pip3 install --user google
+pip3 install --user protobuf
 ```
 
 ### Setup
