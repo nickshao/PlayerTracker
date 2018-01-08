@@ -18,14 +18,13 @@ ffmpeg -i video.mpg -r 10 -qscale:v 2 output_%04d.jpg
 ## Darkflow
 
 ### Dependencies
-	order is important
-	```
-	pip3 install --user cython
-	pip3 uninstall protobuf
-	pip3 uninstall google
-	pip3 install google
-	pip3 install protobuf
-	```
+```
+pip3 install --user cython
+pip3 uninstall protobuf
+pip3 uninstall google
+pip3 install google
+pip3 install protobuf
+```
 
 ### Setup
 
@@ -44,7 +43,7 @@ ffmpeg -i video.mpg -r 10 -qscale:v 2 output_%04d.jpg
 	#! /usr/bin/env python3
 	```
 
-4. Dowload `yolo.cfg` and `yolo.weights`
+4. Dowload `yolo.cfg` in `cfg` and `yolo.weights` in `bin`
 	```
 	wget https://pjreddie.com/media/files/yolo.weights
 	wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolo.cfg
