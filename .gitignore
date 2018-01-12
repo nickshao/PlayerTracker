@@ -8,3 +8,8 @@ __pycache__/
 
 # synology
 @eaDir/
+
+#modify
+*~
+*.pyc
+*.un~
