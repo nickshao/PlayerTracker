@@ -5,9 +5,9 @@ class Constant:
     INTERVAL = 10
     DIFF = 6
     X_MIN = 0
-    X_MAX = 1000
+    X_MAX = 100
     Y_MIN = 0
-    Y_MAX = 500
+    Y_MAX = 50
     COL_WIDTH = 0.3
     SCALE = 1.65
     FONTSIZE = 6

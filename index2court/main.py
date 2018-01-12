@@ -17,8 +17,7 @@ for i in range(4,80):
     fname = 'output{0:03d}'.format(i)
 
     data = pd.read_json('../yolo/jazz_thunder/out/output{0:03d}.json'.format(i))
-    ax = plt.axes(xlim=(Constant.X_MIN,Constant.X_MAX),
-                    ylim=(Constant.Y_MIN, Constant.Y_MAX))
+    ax = plt.axes(xlim=(Constant.X_MIN,Constant.X_MAX), ylim=(Constant.Y_MIN, Constant.Y_MAX))
     ax.axis('off')
     ax.grid(False)  # Remove grid
     #print(color_class[fname])
@@ -29,7 +28,7 @@ for i in range(4,80):
         pts = np.array([pts])
         pts = cv2.perspectiveTransform(pts, matrix[i-4])
 
-        circle.center = pts[0][0][0], pts[0][0][1]
+        circle.center = pts[0][0][0]/2, pts[0][0][1]
         ax.add_patch(circle)
     
     court = plt.imread("court.png")
@@ -38,4 +37,4 @@ for i in range(4,80):
     plt.show()
     plt.savefig('game/myfig_{0:03d}.jpg'.format(i))
     plt.close()
-
+    
