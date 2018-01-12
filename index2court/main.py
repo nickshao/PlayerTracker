@@ -31,6 +31,7 @@ for i in range(4,80):
         pts = np.array([pts])
         pts = cv2.perspectiveTransform(pts, matrix[i-4])
         cv2.circle(img, (pts[0][0][0], pts[0][0][1]), 10, color_type[color_class[fname][j]], -1)
+    img = cv2.resize(img, (940, 50)) 
     cv2.imwrite('game/myfig_{0:03d}.jpg'.format(i), img)
     
     '''
