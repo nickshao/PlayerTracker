@@ -11,7 +11,7 @@ import copy
 
 #color_class = pickle.load( open( "../player_classify/new_threshold.pkl", "rb" ) )
 color_class = pickle.load( open( "../player_classify/query_method001.pkl", "rb" ) )
-color_type = [(255,255,0),(32,32,32),(51,51,255), (255,51,51), (51,255,51), (32,32,32)]
+color_type = [(255,51,51),(32,32,32),(51,51,255), (255,51,51), (51,255,51), (32,32,32)]
 
 matrix = np.load("transform.npy")
 index = [[],[],[],[]]
@@ -69,14 +69,31 @@ for i in range(73,3,-1):
         if tr[0] != 9999 and tr[1] != 9999:
             tmp[j] = tr
     track[i] = tmp
-#print(track[74])
-#print(track[73])
-#print(track[72])
+for j in range(10):
+    last_x = 0
+    last_y = 0
+    count = 0
+    for i in range(74,3,-1):
+        if track[i][j][0] == last_x and track[i][j][1] == last_y:
+            count += 1
+        else:
+            count += 1
+            if count > 2:
+                inter_x = (track[i+count][j][0] - track[i][j][0]) / count
+                inter_y = (track[i+count][j][1] - track[i][j][1]) / count
+                for k in range(count):
+                    track[i+count-k][j][0] += inter_x * k
+                    track[i+count-k][j][1] += inter_y * k
+            count = 0
+            last_x = track[i][j][0]
+            last_y = track[i][j][1]
+print(track[69])
+
 for i in range(4,75):
     img= cv2.imread('court.png')
     for j in range(len(track[i])):
         #cv2.circle(img, (pts[0][0][0], pts[0][0][1]), 10, color_type[0], -1)
-        cv2.circle(img, (track[i][j][0], track[i][j][1]), 20, color_type[track[i][j][2]], thickness=-1, lineType=8, shift=0)
+        cv2.circle(img, (int(track[i][j][0]), int(track[i][j][1])), 15, color_type[track[74][j][2]], thickness=-1, lineType=8, shift=0)
     img = cv2.resize(img, (940, 500)) 
     cv2.imwrite('game_out/myfig_{0:03d}.jpg'.format(i), img)
     
