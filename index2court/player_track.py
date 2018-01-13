@@ -60,7 +60,7 @@ for i in range(73,3,-1):
             if dis < min_dis:
                 min_dis = dis
                 min_index = j
-        if min_dis > 50:
+        if min_dis > 150:
             continue
         tmp_track[min_index][0] = 9999
         tmp_track[min_index][1] = 9999
