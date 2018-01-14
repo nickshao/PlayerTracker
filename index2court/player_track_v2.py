@@ -97,7 +97,7 @@ for i in range(4,74):
         for j in range(len(track[i])):
             dx = (track[i+1][j][0] - track[i][j][0]) / 10
             dy = (track[i+1][j][1] - track[i][j][1])/ 10
-            cv2.circle(img, (int(track[i][j][0] + k * dx), int(track[i][j][1] + k * dy)), 15, color_type[track[74][j][2]], thickness=-1, lineType=8, shift=0)
+            cv2.circle(img, (int(track[i][j][0] + k * dx), int(track[i][j][1] + k * dy)), 15, color_type[track[46][j][2]], thickness=-1, lineType=8, shift=0)
             img = cv2.resize(img, (940, 500)) 
             cv2.imwrite('game_out/myfig_{0:03d}-{1:02d}.jpg'.format(i, k), img)
     
