@@ -101,13 +101,13 @@ for j in range(10):
             last_x = track[i][j][0]
             last_y = track[i][j][1]
 
-#print(track[69])
-
-for i in range(1,76):
-    img= cv2.imread('court.png')
-    for j in range(len(track[i])):
-        cv2.circle(img, (int(track[i][j][0]), int(track[i][j][1])), 15, color_type[track[46][j][2]], thickness=-1, lineType=8, shift=0)
-    img = cv2.resize(img, (940, 500)) 
-    cv2.imwrite('warriors/myfig_{0:03d}.jpg'.format(i), img)
-
-
+for i in range(1,75):
+    for k in range(10): 
+        img= cv2.imread('court.png')
+        for j in range(len(track[i])):
+            dx = (track[i+1][j][0] - track[i][j][0]) / 10
+            dy = (track[i+1][j][1] - track[i][j][1])/ 10
+            cv2.circle(img, (int(track[i][j][0] + k * dx), int(track[i][j][1] + k * dy)), 15, color_type[track[46][j][2]], thickness=-1, lineType=8, shift=0)
+            img = cv2.resize(img, (940, 500)) 
+            cv2.imwrite('game_out2/myfig_{0:03d}-{1:02d}.jpg'.format(i, k), img)
+ 
