@@ -42,11 +42,11 @@ Original image:
 Target tactic board:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/court.jpg" width="50%" height="50%"/>  
 
-Step1 : Object detection
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture1.jpg" width="50%" height="50%"/>  <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture2.jpg" width="50%" height="50%"/>  
+Step1 : Object detection (YOLO)
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture1.jpg" width="50%" height="50%"/> 
 
 Step2 : Team Classifier
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.jpg" width="50%" height="50%"/>  <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture5.jpg" width="50%" height="50%"/>  
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.jpg" width="50%" height="50%"/>
 
 Step3 : Mapping
 1, Line detection and DBSCAN:  
