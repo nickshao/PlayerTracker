@@ -106,5 +106,8 @@ Team : ADL 躺分仔
 
 ### Reference
 
-Todo:
+[1] S. Ren, K. He, R. Girshick, and J. Sun. Faster r-cnn: To- wards real-time object detection with region proposal net- works.  
 
+[2] Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi. You Only Look Once: Unified, Real-Time Object Detection.  
+
+[3] Evan Cheshire, Cibele Halasz, and Jose Krause Perin. Player Tracking and Analysis of Basketball Plays.   
