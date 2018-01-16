@@ -1,6 +1,6 @@
 # PlayerTracker: Neural Basketball Assistant
 
-Final Project of Applied Deep Learning 2017 Fall in NTU.
+Final Project of Applied Deep Learning 2017 in NTU.
 
 Track the movements of NBA players and map them onto a tactic board.  
 
@@ -46,6 +46,7 @@ sh train.sh
 ```
 python3.6 index2court/player_track_warriors.py
 ```
+p.s. Output frames will store in `index2court/game_out2/`.
 
 ### Demo
 
@@ -79,15 +80,16 @@ Step4 : Player Tracking
 - sklearn
 
 ### Contributors:
-
-- B03902009
-- B03902033
-- B03902052
-- B03902058
-- B03902090
+Team : ADL 躺分仔
+- 李承軒 [B03902009]("https://github.com/Spicy30")
+- 陳雋 [B03902033]("https://github.com/falloutboyrocks")
+- 顏廷宇 [B03902052]("https://github.com/y95847frank")
+- 紀典佑 [B03902058]("https://github.com/dianyo")
+- 邵楚荏 [B03902090]("https://github.com/nickshao")
 
 ### Reference
 
 Todo:
 
-
+### Poster
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/adl_final_poster_v2.pdf" width="50%" height="50%"/>  
