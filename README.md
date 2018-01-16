@@ -98,4 +98,4 @@ Team : ADL 躺分仔
 Todo:
 
 ### Poster
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/adl_final_poster_v2.png" width="50%" height="50%"/>  
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/adl_final_poster_v2.png"/>  
