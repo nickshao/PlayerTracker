@@ -93,6 +93,7 @@ Team : ADL 躺分仔
 - 紀典佑 [B03902058]("https://github.com/dianyo")  
 - 邵楚荏 [B03902090]("https://www.google.com")  
 - I'm an inline-style [link](https://www.google.com)
+- 哈哈 [B03902052]("https://github.com/y95847frank")
 [I'm an inline-style link](https://www.google.com)
 
 ### Reference
