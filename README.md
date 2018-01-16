@@ -43,10 +43,10 @@ Target tactic board:
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/court.jpg" width="50%" height="50%"/>  
 
 Step1 : Object detection (YOLO)
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture1.jpg" width="50%" height="50%"/> 
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture1.png" width="50%" height="50%"/> 
 
 Step2 : Team Classifier
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.jpg" width="50%" height="50%"/>
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.png" width="50%" height="50%"/> <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture5.png" width="50%" height="50%"/>
 
 Step3 : Mapping
 1, Line detection and DBSCAN:  
@@ -56,7 +56,7 @@ Step3 : Mapping
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_warped.jpg" width="50%" height="50%"/>
 
 Step4 : Player Tracking
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture4.jpg" width="50%" height="50%"/>  
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture4.png" width="50%" height="50%"/>  
 
 Step5 : Postprocessing
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/output2.mp4" width="50%" height="50%"/>  
