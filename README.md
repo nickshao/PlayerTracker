@@ -34,6 +34,7 @@ p.s. In `index2court/` directory
 Convert frames into video with ffmpeg.  
 p.s. `warroirs_vs_jazz.mp4`
 
+---
 
 ### Train
 
@@ -41,12 +42,16 @@ p.s. `warroirs_vs_jazz.mp4`
 sh train.sh
 ```
 
+---
+
 ### Test
 
 ```
 python3.6 index2court/player_track_warriors.py
 ```
 p.s. Output frames will store in `index2court/game_out2/`.
+
+---
 
 ### Demo
 
@@ -75,6 +80,8 @@ Step5 : Postprocessing
 Final Compare :    
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/compare.gif" width="50%" height="50%"/>  
 
+---
+
 ### Dependency
 - cv2
 - ffmpeg
@@ -85,6 +92,8 @@ Final Compare :
 - python3.6
 - sklearn
 
+---
+
 ### Contributors:
 Team : ADL 躺分仔
 - 李承軒 B03902009 https://github.com/Spicy30  
@@ -92,6 +101,8 @@ Team : ADL 躺分仔
 - 顏廷宇 B03902052 https://github.com/y95847frank  
 - 紀典佑 B03902058 https://github.com/dianyo  
 - 邵楚荏 B03902090 https://www.google.com  
+
+---
 
 ### Reference
 
