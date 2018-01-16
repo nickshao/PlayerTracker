@@ -6,33 +6,32 @@ Track the movements of NBA players and map them onto a tactic board.
 
 ### 0. Preprocessing : 
 Extract frames from NBA highlight video taking advantage of ffmpeg.
+p.s. In `warrior_vs_jazz/` directory
 
----
 
 ### 1. Object Detection : 
 Use YOLO or Faster-rcnn to detect players in each frame.
+p.s. In `yolo/` directory
 
----
 
 ### 2. Team Classifier : 
 Tandform each bounding box into histogram vvector and label three bounding box to classify players' corresponding teams.
+p.s. In `player_classify/` directory
 
----
 
 ### 3. Mapping between video and tatic board : 
 Utilize court line to map frame to tatic board.
+p.s. In `src/` directory
 
----
 
 ### 4. Player Tracking : 
 For each frame, use their former or latter frame to delete rebundant point and do track smoothing.
-
----
+p.s. In `index2court/` directory
 
 ### 5. Postprocessing : 
 Convert frames into video with ffmpeg.
+p.s. `warroirs_vs_jazz.mp4`
 
----
 
 ### Train
 
@@ -57,7 +56,7 @@ Step1 : Object detection (YOLO)
 Step2 : Team Classifier  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.png" width="50%" height="50%"/>
 
-Step3 : Mapping
+Step3 : Mapping  
 1, Line detection and DBSCAN:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_houghlines.jpg" width="50%" height="50%"/>  
 
