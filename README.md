@@ -69,6 +69,12 @@ Step3 : Mapping
 Step4 : Player Tracking  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture4.png" width="50%" height="50%"/>  
 
+Step5 : Postprocessing  
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/w_j.gif" width="50%" height="50%"/>  
+
+Final Compare    
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/compare.gif" width="50%" height="50%"/>  
+
 ### Dependency
 - cv2
 - ffmpeg
