@@ -5,19 +5,22 @@ Track the movements of NBA players and map them onto a tactic board.
 ## System Pipeline  
 
 #### 0. Preprocessing : 
-    Extract frames from NBA highlight video taking advantage of ffmpeg.
+Extract frames from NBA highlight video taking advantage of ffmpeg.
 
 #### 1. Object Detection : 
-    Use YOLO or Faster-rcnn to detect players in each frame.
+Use YOLO or Faster-rcnn to detect players in each frame.
 
 #### 2. Team Classifier : 
-    Tandform each bounding box into histogram vvector and label three bounding box to classify players' corresponding teams.
+Tandform each bounding box into histogram vvector and label three bounding box to classify players' corresponding teams.
 
-#### 3. Mapping between video and tatic board : Utilize court line to map frame to tatic board.
+#### 3. Mapping between video and tatic board : 
+Utilize court line to map frame to tatic board.
 
-#### 4. Player Tracking : For each frame, use their former or latter frame to delete rebundant point and do track smoothing.
+#### 4. Player Tracking : 
+For each frame, use their former or latter frame to delete rebundant point and do track smoothing.
 
-#### 5. Postprocessing : Convert frames into video with ffmpeg.
+#### 5. Postprocessing : 
+Convert frames into video with ffmpeg.
 
 ### Train
 
