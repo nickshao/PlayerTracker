@@ -72,7 +72,7 @@ Step4 : Player Tracking
 Step5 : Postprocessing  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/w_j.gif" width="50%" height="50%"/>  
 
-Final Compare    
+Final Compare :    
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/compare.gif" width="50%" height="50%"/>  
 
 ### Dependency
@@ -98,4 +98,4 @@ Team : ADL 躺分仔
 Todo:
 
 ### Poster
-<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/adl_final_poster_v2.pdf" width="50%" height="50%"/>  
+<img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/adl_final_poster_v2.png" width="50%" height="50%"/>  
