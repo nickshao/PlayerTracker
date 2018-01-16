@@ -1,4 +1,6 @@
-# PlayerTracker
+# PlayerTracker: Neural Basketball Assistant
+
+Final Project of Applied Deep Learning 2017 Fall in NTU.
 
 Track the movements of NBA players and map them onto a tactic board.  
 
@@ -50,20 +52,20 @@ python3.6 index2court/player_track_warriors.py
 Original image:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_original.jpg" width="50%" height="50%"/>  
 
-Step1 : [Object detection]("https://github.com/nickshao/PlayerTracker#1-object-detection-") (YOLO)  
+Step1 : Object detection (YOLO)  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture1.png" width="50%" height="50%"/> 
 
-Step2 : [Team Classifier]("https://github.com/nickshao/PlayerTracker#2-tram-classifeier-")  
+Step2 : Team Classifier  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture3.png" width="50%" height="50%"/>
 
-Step3 : [Mapping]("https://github.com/nickshao/PlayerTracker#3-mapping-between-video-and-tatic-board-")  
+Step3 : Mapping  
 1, Line detection and DBSCAN:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_houghlines.jpg" width="50%" height="50%"/>  
 
 2, Warped Frame:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_warped.jpg" width="50%" height="50%"/>
 
-Step4 : [Player Tracking]("https://github.com/nickshao/PlayerTracker#4-player-tracking-")  
+Step4 : Player Tracking  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/Picture4.png" width="50%" height="50%"/>  
 
 ### Dependency
@@ -75,6 +77,14 @@ Step4 : [Player Tracking]("https://github.com/nickshao/PlayerTracker#4-player-tr
 - pickle
 - python3.6
 - sklearn
+
+### Contributors:
+
+- B03902009
+- B03902033
+- B03902052
+- B03902058
+- B03902090
 
 ### Reference
 
