@@ -1,6 +1,4 @@
-# PlayerTracker
-
-Track the movements of NBA players and map them onto a tactic board.  
+# Mapping between video and tatic board
 
 ## System Pipeline  
 
@@ -15,7 +13,7 @@ Takes a sequence of frames and returns the transformation matrix for mappings be
 ### To Test
 
 ```
-python3 src/tranform.py
+python3 ./tranform.py
 ```
 
 ### Demo

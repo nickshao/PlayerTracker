@@ -23,7 +23,7 @@ p.s. In `player_classify/` directory
 
 ### 3. Mapping between video and tatic board : 
 Utilize court line to map frame to tatic board.  
-p.s. In `src/` directory
+p.s. In `mapping/` directory
 
 
 ### 4. Player Tracking : 
