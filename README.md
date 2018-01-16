@@ -4,18 +4,23 @@ Track the movements of NBA players and map them onto a tactic board.
 
 ## System Pipeline  
 
-1. Bounding boxes and locations detection.  
-2. Locations tranformation from video frames to tactic board.  
-3. Reconstruction of movements on the tactic board.  
+0. Preprocessing : Extract frames from NBA highlight video taking advantage of ffmpeg.
+1. Object Detection : Use YOLO or Faster-rcnn to detect players in each frame.
+2. Team Classifier : Tandform each bounding box into histogram vvector and label three bounding box to classify players' corresponding teams.
+3. Mapping between video and tatic board : Utilize court line to map frame to tatic board.
+4. Player Tracking : For each frame, use their former or latter frame to delete rebundant point and do track smoothing.
+5. Postprocessing : Convert frames into video with ffmpeg.
 
-## Location Transformation
-
-Takes a sequence of frames and returns the transformation matrix for mappings between video and tactic board.
-
-### To Test
+### Train
 
 ```
-python3 src/tranform.py
+sh train.sh
+```
+
+### Test
+
+```
+python3.6 index2court/player_track_warriors.py
 ```
 
 ### Demo
@@ -32,9 +37,12 @@ After Line detection and DBSCAN:
 Warped Frame:  
 <img src="https://github.com/nickshao/PlayerTracker/blob/master/assets/t_warped.jpg" width="50%" height="50%"/>  
 
-### Defects/Improvements
+### Environment
 
-Several parameters need to be tuned to suit each video.
+
+### Reference
+
+To do:
 
 
 
