@@ -83,6 +83,9 @@ Final Compare :
 ---
 
 ### Dependency
+- cython
+- google
+- protobuf
 - cv2
 - ffmpeg
 - matplotlib
