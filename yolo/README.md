@@ -20,8 +20,8 @@ ffmpeg -i video.mpg -r 10 -qscale:v 2 output_%04d.jpg
 ### Dependencies
 ```
 pip3 install --user cython
-pip3 uninstall --user protobuf
-pip3 uninstall --user google
+pip3 uninstall protobuf
+pip3 uninstall google
 pip3 install --user google
 pip3 install --user protobuf
 ```
@@ -54,10 +54,10 @@ pip3 install --user protobuf
 
 Forward all images in `sample_img/` using yolo and 100% GPU usage and predictions are put in `sample_img/out/`
 ```
-flow --imgdir sample_img/ --model cfg/yolo.cfg --load bin/yolo.weights --gpu 1.0
+./flow --imgdir sample_img/ --model cfg/yolo.cfg --load bin/yolo.weights --gpu 1.0
 ```
 
 Forward all images in `sample_img/` using yolo and JSON output are put in `sample_img/out/`
 ```
-flow --imgdir sample_img/ --model cfg/yolo.cfg --load bin/yolo.weights --gpu 1.0 --json
+./flow --imgdir sample_img/ --model cfg/yolo.cfg --load bin/yolo.weights --gpu 1.0 --json
 ```

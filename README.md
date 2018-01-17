@@ -17,7 +17,7 @@ p.s. In `yolo/` directory
 
 
 ### 2. Team Classifier : 
-Tandform each bounding box into histogram vvector and label three bounding box to classify players' corresponding teams.  
+Tandform each bounding box into histogram vector and label three bounding box to classify players' corresponding teams.  
 p.s. In `player_classify/` directory
 
 
@@ -39,7 +39,7 @@ p.s. `warroirs_vs_jazz.mp4`
 ### Train
 
 ```
-sh train.sh
+sh run.sh
 ```
 
 ---
