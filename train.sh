@@ -1,6 +1,10 @@
 #!/bin/bash
 
-cd yolo/darknet
+git clone https://github.com/pjreddie/darknet
+cd darknet
+make
+
+mv ../cfg/voc.data cfg
 
 mkdir train
 cd train

@@ -61,3 +61,28 @@ Forward all images in `sample_img/` using yolo and JSON output are put in `sampl
 ```
 ./flow --imgdir sample_img/ --model cfg/yolo.cfg --load bin/yolo.weights --gpu 1.0 --json
 ```
+
+## Darknet
+
+### Setup
+
+1. clone this project
+	```
+	git clone https://github.com/pjreddie/darknet.git
+	```
+
+2. build
+	```
+	make
+	```
+3. Download `yolo.weights`
+	```
+	wget https://pjreddie.com/media/files/yolo.weights
+	```
+
+### Usage
+
+run the detection
+```
+./darknet detect cfg/yolo.cfg yolo.weights data/dog.jpg
+```
