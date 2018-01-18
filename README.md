@@ -39,7 +39,7 @@ p.s. `warroirs_vs_jazz.mp4`
 ### Train
 
 ```
-sh run.sh
+sh train.sh
 ```
 
 ---
