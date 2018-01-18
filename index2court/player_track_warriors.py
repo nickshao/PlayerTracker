@@ -7,7 +7,7 @@ import copy
 color_class = pickle.load( open( "../player_classify/query_method001_warriors_vs_jazz.pkl", "rb" ) )
 color_type = [(160,160,160),(255,0,0),(32,32,32),(51,51,255), (255,51,51), (51,255,51), (32,32,32)]
 
-matrix = np.load("../warrior_vs_jazz/transform.npy")
+matrix = np.load("../input_frames/warrior_vs_jazz/transform.npy")
 index = [[]]
 
 for i in range(1,76):

@@ -47,7 +47,8 @@ sh train.sh
 ### Test
 
 ```
-python3.6 index2court/player_track_warriors.py
+cd index2court/
+python3.6 player_track_warriors.py
 ```
 p.s. Output frames will store in `index2court/game_out2/`.
 
