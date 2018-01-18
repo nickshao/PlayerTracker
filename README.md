@@ -103,7 +103,7 @@ Team : ADL 躺分仔
 - 陳雋 B03902033 https://github.com/falloutboyrocks  
 - 顏廷宇 B03902052 https://github.com/y95847frank  
 - 紀典佑 B03902059 https://github.com/dianyo  
-- 邵楚荏 B03902090 https://www.google.com  
+- 邵楚荏 B03902090 https://github.com/nickshao 
 
 ---
 
