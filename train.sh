@@ -4,7 +4,7 @@ git clone https://github.com/pjreddie/darknet
 cd darknet
 make
 
-mv ../cfg/voc.data cfg
+cp ../cfg/voc.data cfg/
 
 mkdir train
 cd train
